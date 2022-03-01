@@ -1,0 +1,43 @@
+
+<div class="container-lg">
+  <div class="table-responsive">
+      <div class="table-wrapper">
+          <div class="table-title">
+              <div class="row">
+                  <div class="col-sm-8"><h2>Employee <b>Details</b></h2></div>
+                  <div class="col-sm-4">
+                    <button mat-raised-button color="primary" class="demo-button m-2 " routerLink="/addtask">
+                      Add data
+                    </button>
+
+                  </div>
+              </div>
+          </div>
+          <table class="table table-bordered">
+              <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>Department</th>
+                      <th>Phone</th>
+                      <th>Actions</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let x of customerlist">
+                      <td>{{x.username}}</td>
+                      <td>{{x.department}}</td>
+                      <td>{{x.phonenumber}}</td>
+                      <td class="d-block">
+                        <button mat-raised-button color="warn" class="demo-button m-2 " routerLink="/addtask">
+                          Delete
+                        </button>
+                        <button mat-raised-button color="primary" class="demo-button m-2 " routerLink="/addtask">
+                          Edit
+                        </button>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

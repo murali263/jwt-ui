@@ -1,0 +1,41 @@
+<h1 class="text-center  mt-5"  style="color: crimson;" >Admin Register</h1>
+
+<form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+  <mat-grid-list cols="2" rowHeight="400px">
+    <mat-grid-tile>
+      <div class="adminControls">
+      <input type="hidden" formControlName="_id">
+      <mat-form-field appearance="outline" style="width:100%">
+        <mat-label>FullName</mat-label>
+        <input matInput formControlName="username" required>
+        <mat-error>Full Name is Required</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" style="width:100%">
+        <mat-label>SurName</mat-label>
+        <input matInput formControlName="SurName" required>
+        <mat-error>SurName is Required</mat-error>
+      </mat-form-field>
+      <br>
+</div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="adminControls">
+      <mat-form-field appearance="outline" style="width:100%">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" required>
+        <mat-error>Password is Required</mat-error>
+      </mat-form-field><br>
+      <mat-form-field appearance="outline" style="width:100%">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="Email" required>
+        <mat-error>Email is Required</mat-error>
+      </mat-form-field>
+      <button mat-raised-button type="submit" color="primary">Register</button>
+    </div>
+
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</form>
+
+
